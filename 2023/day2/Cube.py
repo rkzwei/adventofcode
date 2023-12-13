@@ -21,7 +21,7 @@ def game_calculator(raw):
         for s in sets:
             color_counts = {color: int(count) for count, color in (item.split() for item in s.split(','))}
             print (color_counts)
-
+            
             if any(color_counts[color] > valid_cubes.get(color, 0) for color in color_counts):
                 print("Invalid set! Breaking.")
                 validity = False
